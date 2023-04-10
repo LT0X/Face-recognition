@@ -1,0 +1,74 @@
+
+spring:
+  main:
+    allow-bean-definition-overriding : true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  datasource:
+    url:  jdbc:mysql://localhost:3306/face_recognition?serverTimezone=CTT&characterEncoding=utf8
+    #    url:  jdbc:mysql://localhost:3306/c3c?serverTimezone=CTT&characterEncoding=utf8
+    username: root
+    #    password: xtc
+#    password: xtc
+    password: XTCqq+582
+    driver-class-name: com.mysql.jdbc.Driver
+
+  mvc:
+    static-path-pattern: /static/**
+
+  resources:
+#    static-locations: file:D:\projectImg\faces
+    static-locations: file:/project/projectImage/faceimage
+
+  configuration:
+    map-underscore-to-camel-case: true
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+arcface:
+  appId: 9zoxQ4EBCw3KgzkH9vK3VFZjtFUvPV4stNmrEMLwF2Ym
+#  win
+#  sdkKey: 9VS1cjhCCx9usn8kZ165cvTtyNrPjku1e5DdAGhPqrnN
+#   linux
+  sdkKey: 9VS1cjhCCx9usn8kZ165cvTtqGHFc3dKq9ersUVfuikM
+#  dllPath: D:\temps\ArcSoft_ArcFace_Java_Windows_x64_V3.0\libs\WIN64
+  dllPath: /project/arc/ArcSoft_ArcFace_Java_Linux_x64_V3.0/libs/LINUX64
+
+  function-configuration:
+    supportAge: true
+    supportFace3dAngle: true
+    supportFaceDetect: true
+    supportFaceRecognition: true
+    supportGender: true
+    supportLiveness: true
+    supportIRLiveness: true
+  engine-configuration:
+    detectFaceOrientPriority: ASF_OP_ALL_OUT
+    detectFaceScale: 16
+    detectFaceMaxNum: 10
+
+#imagePath: D:\projectImg\faces\
+imagePath: /project/projectImage/faceimage
+
+#serviceIP: 192.168.2.32
+serviceIP: 8.134.108.219
+
+dllpath : /project/arc/ArcSoft_ArcFace_Java_Linux_x64_V3.0/libs/LINUX64
+
+appId : 9zoxQ4EBCw3KgzkH9vK3VFZjtFUvPV4stNmrEMLwF2Ym
+
+sdkKey : 9VS1cjhCCx9usn8kZ165cvTtqGHFc3dKq9ersUVfuikM
+
+
+
+
+
+
+
+
+
